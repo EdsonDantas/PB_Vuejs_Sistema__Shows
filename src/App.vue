@@ -1,19 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Menu />
+    <router-view/>
+  <footer class="footer">
+    <p><em> Sistema de Apoio ao Visitante 2020</em></p>
+  </footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import "bootstrap-vue/dist/bootstrap-vue.css";
+import "bootstrap/dist/css/bootstrap.css";
+
+import Menu from './components/Menu'
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+   Menu,
+  },
+};
 </script>
 
 <style>
@@ -24,5 +31,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+footer {
+  margin: 40px 0 0 0;
+  font-size: 10px;
 }
 </style>
